@@ -1,0 +1,9 @@
+/*
+*/
+{  
+   'username':'管理员',
+   'users':[ 
+       {'id':1,'username':'张三','age':21,'nickname':'绿茶'},
+       {'id':2,'username':'李四','age':21,'nickname':'红茶'}   
+   ] 
+}

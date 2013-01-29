@@ -1,0 +1,26 @@
+/*
+*/
+{  
+   '_path':{
+       'usernamepath':'管理员path',
+       'computer':["基本数组元素",
+            {
+                'doc':'sd',
+                'desk1':[{'name':"张三"}]
+            },
+            {
+                'doc':'sd',
+                'c':{'doc':{'desk1':[{'name':"张三"}]}}
+            }
+       ]
+   },
+   '_public':{},
+
+   '_each':[
+      {'username':'管理员',
+      'users':[ 
+          {'id':1,'username':'张三','age':21,'nickname':'绿茶'},
+          {'id':2,'username':'李四','age':21,'nickname':'红茶'}   
+      ] }
+   ]   
+}

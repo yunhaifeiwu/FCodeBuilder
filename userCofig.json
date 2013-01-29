@@ -1,0 +1,43 @@
+/* 
+ inCachePath;输入缓存地址（模板及 模板数据的输入）
+ outeCachePath; 输出缓存地址
+ inTemplateType;输入模板类型？
+ inTemplateAdress; 模板地址
+ ignoreInTemplatePath;忽略模板地址中某些路径
+ inTemplateDataType; 输出模板类型？
+ inTemplateDateAdress;  模板数据地址
+ ignoreInTemplateDataPath; 忽略模板数据地址中某些路径
+ outType;输出类型
+ outAdress; 输出地址
+ ignoreOutPath; 忽加输出地址中某些路径
+ */
+{
+  inCachePath:'data/cache/in',
+  outCachePath:'data/cache/out',
+  inTemplateType:'file', 
+  inTemplateAdress:'data/template',  
+  ignoreInTemplatePath:null,  
+  inTemplateDataType:'file', 
+  inTemplateDateAdress:'data/templateData',  
+  ignoreInTemplateDataPath:null, 
+  outType:'file', 
+  outAdress:'data/out', 
+  ignoreOutPath:null, 
+  extends:{ 
+  }, 
+  rules:[ 
+     { 
+       templateData:'data/templateData/*', 
+       template:'data/template/*', 
+       igore:'false', 
+       out:'data/out', 
+       disableOut:'false' 
+     }, 
+     { 
+       templateData:'xx', 
+       template:'xx', 
+       out:'xx', 
+       igore:'false' 
+     } 
+  ]
+}

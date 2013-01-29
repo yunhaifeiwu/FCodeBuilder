@@ -1,0 +1,50 @@
+﻿/* 
+ */
+{
+  fileConfigRead:{ 
+    type:'fcodebuilder.cfg.FileConfigRead',
+    fields:{ 
+      file:'userCofig.json',  
+    }  
+  },  
+  config:{ 
+    type:'fcodebuilder.cfg.Config$SysConfig',  
+    fields:{  
+      configControl:{refer:'fileConfigRead'} 
+    } 
+  },  
+  readTempletFromFile:{ 
+    type:'fcodebuilder.in.ReadSourceFromFile',
+    fields:{ 
+    //0为读模板文件 
+       type:0  
+    }  
+  },  
+  readTempleteDaTaFromFile:{ 
+    type:'fcodebuilder.in.ReadSourceFromSvn',
+    args:[
+        'https://mis/svn/templateData/',
+        'admin',
+        '123'   
+    ],
+    fields:{ 
+    //1为读模板数据文件 
+      type:1  
+    }  
+  },  
+ 
+  outControl:{ 
+    type:'fcodebuilder.out.OutToSVN',
+    args:[
+        'https://mis/svn/out/',        
+        'admin',
+        '123'   
+    ]
+  },  
+  codeEngine:{ 
+    type:'fcodebuilder.engine.FreeMakerEngine',
+    fields:{  
+      outControl:{refer:'outControl'} 
+    } 
+  }  
+}
